@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 export default function Nabvar() {
 
     const [scroll, setScroll] = useState(false)
+    const [isActive, setIsActive] = useState(false)
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -24,25 +26,50 @@ export default function Nabvar() {
         { name: 'Contact', href: '/contact' },
     ]
 
+    const menu = (
+        <div className={`w-6 space-y-1 md:hidden ${isActive ? '-space-y-0.5' : ''}`} onClick={() => setIsActive(!isActive)}>
+            <div className={`w-6 h-0.5 bg-white transition-all rounded-full ${isActive ? 'rotate-45' : 'ml-2'}`}></div>
+            <div className={`w-6 h-0.5 bg-white transition-all rounded-full ${isActive ? '-rotate-45' : ''}`}></div>
+        </div>
+    )
+
+    const mode = (
+        <div className='md:hidden'>Dark mode</div>
+    )
+
+    const navbar = (
+        nav.map(nav => (
+            <Link href={nav.href} key={nav.name}>
+                <a className={`px-4 py-2 hover:text-white font-semibold text-sm hidden md:flex
+                            ${router.asPath == nav.href ? 'text-white' : ''}`}>
+                    {nav.name}
+                </a>
+            </Link>
+        ))
+    )
+
+    const navbarMobile = (
+        <div className={`flex flex-col items-center justify-center 
+                        ${isActive ? 'visible' : 'hidden'}
+                        md:hidden
+                        absolute mt-16 top-0`}>
+            {navbar}
+        </div>
+    )
+
     return (
         <div className='sticky top-0 z-10
                         md:max-w-3xl mx-auto'>
             <div className={`
-                flex justify-center items-center 
-                backdrop-blur-sm ${scroll ? 'border-b' : 'border-none'} border-zinc-900            
+                flex items-center justify-between md:justify-center
+                backdrop-blur-sm border-b-2 ${scroll ? 'border-zinc-900' : 'border-transparent'}            
                 absolute transition-all
                 w-full h-16 
                 px-6`}>
-                {
-                    nav.map(item => (
-                        <Link href={item.href} key={item.name}>
-                            <a className={`block px-4 py-2 hover:text-white font-semibold text-sm
-                                ${router.asPath == item.href ? 'text-white' : ''}`}>
-                                {item.name}
-                            </a>
-                        </Link>
-                    ))
-                }
+                {menu}
+                {mode}
+                {navbar}
+                {navbarMobile}
             </div>
         </div>
     )
