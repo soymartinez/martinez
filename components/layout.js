@@ -10,9 +10,9 @@ export default function Layout({ title, children }) {
                 <meta name="twitter:site" content="@omgismartinez" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            
             <Nabvar />
-
-            <main className='relative'>{children}</main>
+            <main className='relative pt-16 px-6'>{children}</main>
         </div>
     )
 }
