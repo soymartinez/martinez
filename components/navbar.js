@@ -25,12 +25,14 @@ export default function Nabvar() {
     ]
 
     return (
-        <div className='sticky top-0 z-10 '>
+        <div className='sticky top-0 z-10
+                        md:max-w-3xl mx-auto'>
             <div className={`
                 flex justify-center items-center 
                 backdrop-blur-sm ${scroll ? 'border-b' : 'border-none'} border-zinc-900            
                 absolute transition-all
-                w-full h-16`}>
+                w-full h-16 
+                px-6`}>
                 {
                     nav.map(item => (
                         <Link href={item.href} key={item.name}>
