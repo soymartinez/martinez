@@ -6,7 +6,7 @@ export default function Home() {
     <Layout title={'Martinez – Developer'}>
       <div className='sm:max-w-3xl mx-auto'>
         <header>
-          <div className='flex sm:flex-row flex-col-reverse my-14'>
+          <div className='flex sm:flex-row flex-col-reverse sm:my-14'>
             <div className='flex flex-col gap-1 mb-4 pr-6'>
               <h1 className='
               text-white 
