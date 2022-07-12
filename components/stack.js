@@ -11,6 +11,7 @@ import Mongodb from './icons/mongodb'
 import Postgresql from './icons/postgresql'
 import Supabase from './icons/supabase'
 import Firebase from './icons/firebase'
+import Trpc from './icons/trpc'
 import Vscode from './icons/vscode'
 import Figma from './icons/figma'
 import Framer from './icons/framer'
@@ -85,6 +86,11 @@ export default function Stack() {
             name: 'Firebase',
             icon: <Firebase />,
             url: 'https://firebase.google.com/',
+        },
+        {
+            name: 'tRPC',
+            icon: <Trpc />,
+            url: 'https://trpc.io/',
         },
     ]
 
