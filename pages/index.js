@@ -4,10 +4,10 @@ import Layout from '../components/layout'
 export default function Home() {
   return (
     <Layout title={'Martinez – Developer'}>
-      <div className='sm:max-w-3xl mx-auto'>
+      <div className='flex justify-center items-center'>
         <header>
-          <div className='flex sm:flex-row flex-col-reverse sm:my-14'>
-            <div className='flex flex-col gap-1 mb-4 pr-6'>
+          <div className='flex sm:flex-row flex-col-reverse mt-24 mx-auto sm:max-w-3xl mb-4'>
+            <div className='flex flex-col gap-1 pr-6'>
               <h1 className='
               text-white 
                 text-3xl md:text-5xl font-bold'>
