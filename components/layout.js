@@ -12,7 +12,7 @@ export default function Layout({ title, children }) {
             </Head>
             
             <Nabvar />
-            <main className='relative pt-16 px-6'>{children}</main>
+            <main className='relative px-6 w-screen h-screen'>{children}</main>
         </div>
     )
 }
