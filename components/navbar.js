@@ -37,7 +37,7 @@ export default function Nabvar() {
         <div className=''>Dark mode</div>
     )
 
-    const navbar = (
+    const navLinks = (
         nav.map(nav => (
             <Link href={nav.href} key={nav.name}>
                 <a className={`px-4 py-2 hover:text-white font-semibold text-sm hidden md:block
@@ -53,21 +53,20 @@ export default function Nabvar() {
                         ${isActive ? 'visible' : 'hidden'}
                         md:hidden
                         absolute mt-16 top-0`}>
-            {navbar}
+            {navLinks}
         </div>
     )
 
     return (
-        <div className='sticky top-0 z-10
-                        sm:max-w-3xl mx-auto'>
-            <div className={`
-                flex items-center justify-between md:justify-start
-                backdrop-blur-sm border-b-2 ${scroll ? 'border-zinc-900' : 'border-transparent'}            
-                absolute transition-all
-                w-full h-16 
-                px-6`}>
-                {menu}
-                {navbar}
+        <div className={`fixed top-0 z-50 w-full px-6
+                backdrop-blur-sm border-b-2 transition-all 
+                ${scroll ? 'border-zinc-900' : 'border-transparent'}`}>
+            <div className={`md:max-w-3xl mx-auto
+                flex items-center justify-between h-16`}>
+                <div className='flex md:-ml-4'>
+                    {menu}
+                    {navLinks}
+                </div>
                 {navbarMobile}
                 {mode}
             </div>
