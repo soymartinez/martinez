@@ -6,7 +6,7 @@ export default function Home() {
     <Layout title={'Martinez – Developer'}>
       <div className='flex justify-center items-center'>
         <header>
-          <div className='flex sm:flex-row flex-col-reverse mt-24 mx-auto sm:max-w-3xl mb-4'>
+          <div className='flex sm:flex-row flex-col-reverse mt-20 sm:mt-28 md:mt-32 mx-auto sm:max-w-3xl mb-4'>
             <div className='flex flex-col gap-1 pr-6'>
               <h1 className='
               text-white 
