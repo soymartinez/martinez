@@ -27,7 +27,7 @@ export default function Nabvar() {
     ]
 
     const menu = (
-        <div className={`space-y-1 md:hidden ${isActive ? '-space-y-0.5' : ''}`} onClick={() => setIsActive(!isActive)}>
+        <div className={`space-y-1 px-4 py-6 -ml-4 md:hidden ${isActive ? '-space-y-0.5' : ''}`} onClick={() => setIsActive(!isActive)}>
             <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? 'rotate-45' : 'ml-2'}`}></div>
             <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? '-rotate-45' : ''}`}></div>
         </div>
@@ -40,7 +40,7 @@ export default function Nabvar() {
     const navLinks = (
         nav.map(nav => (
             <Link href={nav.href} key={nav.name}>
-                <a className={`px-4 py-2 hover:text-white font-semibold text-sm hidden md:block
+                <a className={`md:px-4 py-2 hover:text-white font-semibold
                             ${router.asPath == nav.href ? 'text-white' : ''}`}>
                     {nav.name}
                 </a>
@@ -48,10 +48,17 @@ export default function Nabvar() {
         ))
     )
 
+    const navbar = (
+        <div className='hidden md:block md:-ml-4 text-sm'>
+            {navLinks}
+        </div>
+    )
+
     const navbarMobile = (
-        <div className={`flex flex-col 
-                        ${isActive ? 'visible' : 'hidden'}
-                        md:hidden
+        <div className={`flex flex-col w-full h-screen
+                        ${isActive ? 'opacity-100' : 'hidden'}
+                        md:hidden left-0 transition-all text-xl
+                        bg-gradient-to-b from-black via-black px-6
                         absolute mt-16 top-0`}>
             {navLinks}
         </div>
@@ -62,11 +69,9 @@ export default function Nabvar() {
                 backdrop-blur-sm border-b-2 transition-all 
                 ${scroll ? 'border-zinc-900' : 'border-transparent'}`}>
             <div className={`md:max-w-3xl mx-auto
-                flex items-center justify-between h-16`}>
-                <div className='flex md:-ml-4'>
-                    {menu}
-                    {navLinks}
-                </div>
+                flex items-center justify-between h-20`}>
+                {menu}
+                {navbar}
                 {navbarMobile}
                 {mode}
             </div>
