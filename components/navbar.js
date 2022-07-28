@@ -58,8 +58,8 @@ export default function Nabvar() {
         <div className={`flex flex-col w-full h-screen
                         ${isActive ? 'opacity-100' : 'hidden'}
                         md:hidden left-0 transition-all text-xl
-                        bg-gradient-to-b from-black via-black px-6
-                        absolute mt-16 top-0`}>
+                        bg-gradient-to-b from-[#040407] to-black
+                        absolute mt-20 top-0 space-y-4 px-6`}>
             {navLinks}
         </div>
     )
