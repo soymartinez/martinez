@@ -30,7 +30,7 @@ export default function Spotify() {
                     <div className='flex justify-center items-center'>
                         <Image src={data.albumImageUrl} width={25} height={25} layout={'fixed'} 
                             className='rounded-full z-20' />
-                        <div className='w-5 h-5 rounded-full bg-[#1ED760] animate-ping absolute z-10' />
+                        <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
                     </div>
                     <strong className='text-white font-semibold'>{data.album}</strong>
                     –
