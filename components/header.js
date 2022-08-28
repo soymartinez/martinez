@@ -5,12 +5,10 @@ export default function Header() {
         <header>
             <div className='flex sm:flex-row flex-col-reverse mt-20 sm:mt-28 md:mt-32 mb-4'>
                 <div className='flex flex-col gap-1 sm:pr-6'>
-                    <h1 className='
-              text-white 
-                text-3xl md:text-5xl font-bold'>
+                    <h1 className='text-white text-3xl md:text-5xl font-bold'>
                         Alvaro Martinez
                     </h1>
-                    <span className='text-neutral-200'>
+                    <span className='text-neutral'>
                         Frontend Developer, JS Developer.
                         {/* I am a self-taught developer and I am always looking to learn new things.   */}
                     </span>
