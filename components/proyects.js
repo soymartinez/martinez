@@ -19,7 +19,7 @@ export default function Proyects() {
                     <section key={proyect.title} className='bg-gray rounded-xl relative'>
                         <div className='p-5'>
                             <div className='rounded-t-xl flex flex-col pb-5'>
-                                <a href={proyect.url} target='_blank' rel='noopener'>
+                                <a href={proyect.url} target='_blank' rel='noreferrer'>
                                     <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
                                 </a>
                                 <p className='text-stone text-sm'>{proyect.description}</p>
