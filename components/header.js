@@ -13,7 +13,7 @@ export default function Header() {
                     </span>
                     <span className='mt-3'>
                         I building web apps with React / Next.js and Tailwind CSS and more.
-                        I'm a JavaScript enthusiast and I love doing design and UI.
+                        {`I'm a JavaScript enthusiast and I love doing design and UI.`}
                     </span>
                 </div>
                 <div className='my-6 sm:my-0 sm:w-[170px] w-[80px]'>
