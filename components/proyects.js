@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const proyects = [
     {
-        title: 'Fitstore',
-        description: 'Suplements store.',
+        title: 'fitstore',
+        description: 'suplements store.',
         image: '/fitstore.png',
         url: 'https://fitstore.vercel.app',
         technologies: ['Next.js', 'TailwindCSS', 'Supabase', 'NextAuth'],
@@ -17,15 +17,17 @@ export default function Proyects() {
             {
                 proyects.map(proyect => (
                     <section key={proyect.title} className='bg-gray rounded-xl relative'>
-                        <div className='absolute rounded-xl flex flex-col items-center justify-center w-full h-full p-4 z-10'>
-                            <a href={proyect.url} target='_blank' rel='noopener'>
-                                <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
-                            </a>
-                            <p className='text-stone text-sm'>{proyect.description}</p>
-                        </div>
-                        <div className='opacity-60'>
-                            <Image src={proyect.image} priority={true}
-                                className='rounded-xl' alt={proyect.title} width={400} height={200} layout='responsive' objectFit='contain' />
+                        <div className='p-5'>
+                            <div className='rounded-t-xl flex flex-col pb-5'>
+                                <a href={proyect.url} target='_blank' rel='noopener'>
+                                    <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
+                                </a>
+                                <p className='text-stone text-sm'>{proyect.description}</p>
+                            </div>
+                            <div className='shadow-md'>
+                                <Image src={proyect.image} priority={true}
+                                    className='rounded-xl' alt={proyect.title} width={400} height={200} layout='responsive' objectFit='contain' />
+                            </div>
                         </div>
                     </section>
                 ))
