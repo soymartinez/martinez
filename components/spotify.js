@@ -28,7 +28,7 @@ export default function Spotify() {
             {data.albumImageUrl ?
                 <div className='flex gap-2'>
                     <div className='flex justify-center items-center'>
-                        <Image src={data.albumImageUrl} width={25} height={25} layout={'fixed'} 
+                        <Image src={data.albumImageUrl} alt={data.album} width={25} height={25} layout={'fixed'} 
                             className='rounded-full z-20' />
                         <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
                     </div>
