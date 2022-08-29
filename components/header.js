@@ -10,7 +10,6 @@ export default function Header() {
                     </h1>
                     <span className='text-neutral'>
                         Frontend Developer, JS Developer.
-                        {/* I am a self-taught developer and I am always looking to learn new things.   */}
                     </span>
                     <span className='mt-3'>
                         I building web apps with React / Next.js and Tailwind CSS and more.
@@ -19,7 +18,7 @@ export default function Header() {
                 </div>
                 <div className='my-6 sm:my-0 sm:w-[170px] w-[80px]'>
                     <Image src={'https://avatars.githubusercontent.com/u/72507996?v=4'}
-                        className='rounded-full' layout='responsive' width={40} height={40} />
+                        className='rounded-full' alt='profile' layout='responsive' width={40} height={40} />
                 </div>
             </div>
         </header>
