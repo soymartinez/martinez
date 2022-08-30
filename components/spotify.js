@@ -1,9 +1,9 @@
+import fetcher from 'lib/fetcher'
 import Image from 'next/image'
 import useSWR from 'swr'
 import IconSpotify from './iconSpotify'
 
 export default function Spotify() {
-    const fetcher = (url) => fetch(url).then(r => r.json())
     const { data } = useSWR('/api/spotify', fetcher)
 
     const notPlaying = (
