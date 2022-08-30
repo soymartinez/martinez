@@ -26,15 +26,15 @@ export default function Spotify() {
     return (
         <div className='flex justify-start items-center gap-2'>
             {data.albumImageUrl ?
-                <div className='flex gap-2'>
+                <div className='flex gap-2 overflow-hidden'>
                     <div className='flex justify-center items-center'>
                         <Image src={data.albumImageUrl} alt={data.album} width={25} height={25} layout={'fixed'} 
                             className='rounded-full z-20' />
                         <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
                     </div>
-                    <strong className='text-white font-semibold'>{data.album}</strong>
+                    <strong className='text-white font-semibold whitespace-nowrap'>{data.album}</strong>
                     –
-                    <strong className='font-medium'>{data.artist}</strong>
+                    <strong className='font-medium whitespace-nowrap'>{data.artist}</strong>
                 </div>
                 : notPlaying
             }
