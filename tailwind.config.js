@@ -15,6 +15,15 @@ module.exports = {
         'gray': '#16161a',
         'green': '#1ed760',
       },
+      animation: {
+        'smooth': 'smooth 1s ease-in-out infinite',
+      },
+      keyframes: {
+        'smooth': {
+          '0%, 100%': { transform: 'translateY(5)' },
+          '50%': { transform: 'translateX(-5px)' },
+        },
+      }
     },
   },
   plugins: [],
