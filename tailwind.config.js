@@ -7,21 +7,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#6241ea',
+        'primary': '#5768ff',
         'dark': '#040407',
         'white': '#ffffff',
         'neutral': '#e5e5e5',
         'stone': '#888888',
-        'gray': '#16161a',
+        'gray': '#222228',
         'green': '#1ed760',
       },
       animation: {
-        'smooth': 'smooth 1s ease-in-out infinite',
+        'smooth': 'smooth 60s ease-in-out infinite',
       },
       keyframes: {
         'smooth': {
-          '0%, 100%': { transform: 'translateY(5)' },
-          '50%': { transform: 'translateX(-5px)' },
+          '0%': { transform: 'translateY(50)' },
+          '10%': { transform: 'translateX(-50px)' },
+          '80%': { transform: 'translateY(500px)' },
+          '50%': { transform: 'translateX(200px)' },
         },
       }
     },
