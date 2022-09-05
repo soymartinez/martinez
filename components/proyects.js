@@ -16,9 +16,9 @@ export default function Proyects() {
         <div className='grid md:grid-cols-2 gap-4 mb-4'>
             {
                 proyects.map(proyect => (
-                    <section key={proyect.title} className='bg-gray rounded-xl relative'>
-                        <div className='p-5'>
-                            <div className='rounded-t-xl flex flex-col pb-5'>
+                    <section key={proyect.title} className='rounded-xl relative'>
+                        <div className='backdrop-blur-sm'>
+                            <div className='rounded-t-xl flex flex-col p-4'>
                                 <a href={proyect.url} target='_blank' rel='noreferrer'>
                                     <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
                                 </a>
