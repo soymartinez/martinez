@@ -3,8 +3,8 @@ import Nabvar from './navbar'
 
 export default function Layout({ title, children }) {
     return (
-        <div className='overflow-hidden'>
-            <div className='relative'>
+        <div className='relative h-screen w-screen overflow-x-hidden'>
+            <div className=''>
                 <div className='absolute rounded-full w-96 h-96 bg-primary animate-smooth bg-blend-multiply' />
             </div>
             <Head>
@@ -15,7 +15,7 @@ export default function Layout({ title, children }) {
             </Head>
 
             <Nabvar />
-            <main className='relative px-6 w-screen h-screen backdrop-blur-3xl'>{children}</main>
+            <main className='relative px-6 h-full w-full backdrop-blur-3xl'>{children}</main>
         </div>
     )
 }
