@@ -68,8 +68,8 @@ export default function Stack() {
     ]
 
     return (
-        <div className='backdrop-blur-sm'>
-            <h1 className='text-white'>Technologies</h1>
+        <div className='backdrop-blur-sm my-8'>
+            <h1 className='text-white font-semibold'>Technologies</h1>
             <div className='flex flex-wrap justify-center'>
                 {
                     stack.map((tech) => (
