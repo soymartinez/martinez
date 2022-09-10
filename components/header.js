@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Header() {
     return (
         <header>
-            <div className='flex sm:flex-row flex-col-reverse mt-20 sm:mt-28 md:mt-32 mb-4'>
+            <div className='flex sm:flex-row flex-col-reverse'>
                 <div className='flex flex-col gap-1 sm:pr-6'>
                     <h1 className='text-white text-3xl md:text-5xl font-bold'>
                         Alvaro Martinez
