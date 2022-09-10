@@ -73,9 +73,10 @@ export default function Stack() {
             <div className='flex flex-wrap justify-center gap-2 my-4'>
                 {
                     stack.map((tech) => (
-                        <div className='flex flex-col items-center backdrop-blur-sm border px-6 py-1 rounded-full' key={tech.name}>
+                        <button className={`flex flex-col items-center backdrop-blur-sm border px-6 py-1 rounded-full
+                            hover:border-transparent transition-all`} key={tech.name}>
                             <p>{tech.name}</p>
-                        </div>
+                        </button>
                     ))
                 }
             </div>
