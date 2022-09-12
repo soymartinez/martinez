@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Github from './icons/github'
 
 const proyects = [
     {
@@ -20,11 +21,16 @@ export default function Proyects() {
                     <section key={proyect.title} className={'overflow-hidden relative rounded-xl'}>
                         <div className='absolute rounded-full -z-50 w-96 h-96 bg-primary top-20' />
                         <div className='flex flex-col backdrop-blur-3xl overflow-hidden'>
-                            <div className='p-4'>
-                                <a href={proyect.url} target='_blank' rel='noreferrer'>
-                                    <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
+                            <div className='flex items-center justify-between py-4 px-6'>
+                                <div className='truncate'>
+                                    <a href={proyect.url} target='_blank' rel='noreferrer'>
+                                        <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
+                                    </a>
+                                    <p className='text-stone text-sm'>{proyect.description}</p>
+                                </div>
+                                <a href={proyect.github} target='_blank' rel='noreferrer'>
+                                    <Github className={'white'} />
                                 </a>
-                                <p className='text-stone text-sm'>{proyect.description}</p>
                             </div>
                             <div className='shadow-md'>
                                 <Image src={proyect.image} priority={true}
