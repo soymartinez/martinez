@@ -4,9 +4,7 @@ import Nabvar from './navbar'
 export default function Layout({ title, children }) {
     return (
         <div className='relative overflow-x-hidden'>
-            <div className=''>
-                <div className='absolute rounded-full w-96 h-96 bg-primary animate-smooth bg-blend-multiply' />
-            </div>
+            <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth' />
             <Head>
                 <title>{title}</title>
                 <meta name="description" content="Frontend developer, JS developer" />
@@ -15,7 +13,7 @@ export default function Layout({ title, children }) {
             </Head>
 
             <Nabvar />
-            <main className='relative px-6 backdrop-blur-3xl py-20 sm:pt-28 md:pt-32'>{children}</main>
+            <main className='relative px-6 py-20 sm:pt-28 md:pt-32'>{children}</main>
         </div>
     )
 }
