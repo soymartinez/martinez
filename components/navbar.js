@@ -59,7 +59,7 @@ export default function Nabvar() {
                         {navLinks}
                     </div>
                 </div>
-                {mode}
+                {/* {mode} */}
             </div>
         </div>
     )
