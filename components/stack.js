@@ -71,36 +71,36 @@ export default function Stack() {
         },
     ]
 
+    const software = [
+        {
+            name: 'VS Code',
+            icon: '/icons/vscode.svg',
+            url: 'https://code.visualstudio.com/',
+        },
+        {
+            name: 'Git',
+            icon: '/icons/git.svg',
+            url: 'https://git-scm.com/',
+        },
+        {
+            name: 'GitHub',
+            icon: '/icons/github.svg',
+            url: 'https://github.com/'
+        },
+        {
+            name: 'Figma',
+            icon: '/icons/figma.svg',
+            url: 'https://www.figma.com/',
+        },
+        {
+            name: 'Framer',
+            icon: '/icons/framer.svg',
+            url: 'https://www.framer.com/',
+        }
+    ]
+
     const stack = [
         {
-            
-            "tools": [
-                {
-                    name: 'VS Code',
-                    icon: '/icons/vscode.svg',
-                    url: 'https://code.visualstudio.com/',
-                },
-                {
-                    name: 'Git',
-                    icon: '/icons/git.svg',
-                    url: 'https://git-scm.com/',
-                },
-                {
-                    name: 'GitHub',
-                    icon: '/icons/github.svg',
-                    url: 'https://github.com/'
-                },
-                {
-                    name: 'Figma',
-                    icon: '/icons/figma.svg',
-                    url: 'https://www.figma.com/',
-                },
-                {
-                    name: 'Framer',
-                    icon: '/icons/framer.svg',
-                    url: 'https://www.framer.com/',
-                }
-            ],
             "misc": [
                 {
                     name: 'Vercel',
