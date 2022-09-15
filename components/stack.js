@@ -33,45 +33,47 @@ export default function Stack() {
         },
     ]
 
+    const backend = [
+        {
+            name: 'Node.js',
+            icon: '/icons/nodejs.svg',
+            url: 'https://nodejs.org/en/',
+        },
+        {
+            name: 'Express.js',
+            icon: '/icons/expressjs.svg',
+            url: 'https://expressjs.com/',
+        },
+        {
+            name: 'Prisma',
+            icon: '/icons/prisma.svg',
+            url: 'https://www.prisma.io/',
+        },
+        {
+            name: 'MongoDB',
+            icon: '/icons/mongodb.svg',
+            url: 'https://www.mongodb.com/',
+        },
+        {
+            name: 'PostgreSQL',
+            icon: '/icons/postgresql.svg',
+            url: 'https://www.postgresql.org/',
+        },
+        {
+            name: 'Supabase',
+            icon: '/icons/supabase.svg',
+            url: 'https://supabase.io/',
+        },
+        {
+            name: 'Firebase',
+            icon: '/icons/firebase.svg',
+            url: 'https://firebase.google.com/',
+        },
+    ]
+
     const stack = [
         {
-            "backend": [
-                {
-                    name: 'Node.js',
-                    icon: '/icons/nodejs.svg',
-                    url: 'https://nodejs.org/en/',
-                },
-                {
-                    name: 'Express.js',
-                    icon: '/icons/expressjs.svg',
-                    url: 'https://expressjs.com/',
-                },
-                {
-                    name: 'Prisma',
-                    icon: '/icons/prisma.svg',
-                    url: 'https://www.prisma.io/',
-                },
-                {
-                    name: 'MongoDB',
-                    icon: '/icons/mongodb.svg',
-                    url: 'https://www.mongodb.com/',
-                },
-                {
-                    name: 'PostgreSQL',
-                    icon: '/icons/postgresql.svg',
-                    url: 'https://www.postgresql.org/',
-                },
-                {
-                    name: 'Supabase',
-                    icon: '/icons/supabase.svg',
-                    url: 'https://supabase.io/',
-                },
-                {
-                    name: 'Firebase',
-                    icon: '/icons/firebase.svg',
-                    url: 'https://firebase.google.com/',
-                },
-            ],
+            
             "tools": [
                 {
                     name: 'VS Code',
