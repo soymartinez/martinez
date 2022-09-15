@@ -99,15 +99,16 @@ export default function Stack() {
         }
     ]
 
+    const misc = [
+        {
+            name: 'Vercel',
+            icon: '/icons/vercel.svg',
+            url: 'https://vercel.com/',
+        },
+    ]
+
     const stack = [
         {
-            "misc": [
-                {
-                    name: 'Vercel',
-                    icon: '/icons/vercel.svg',
-                    url: 'https://vercel.com/',
-                },
-            ],
             "learning": [
                 {
                     name: 'Deno',
