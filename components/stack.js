@@ -1,38 +1,40 @@
 export default function Stack() {
+
+    const frontend = [
+        {
+            name: 'React',
+            icon: '/icons/react.svg',
+            url: 'https://reactjs.org/',
+        },
+        {
+            name: 'Next.js',
+            icon: '/icons/nextjs.svg',
+            url: 'https://nextjs.org/',
+        },
+        {
+            name: 'Tailwind CSS',
+            icon: '/icons/tailwindcss.svg',
+            url: 'https://tailwindcss.com/',
+        },
+        {
+            name: 'Framer Motion',
+            icon: '/icons/framer-motion.svg',
+            url: 'https://www.framer.com/motion/',
+        },
+        {
+            name: 'HTML',
+            icon: '/icons/html.svg',
+            url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+        },
+        {
+            name: 'CSS',
+            icon: '/icons/css.svg',
+            url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+        },
+    ]
+
     const stack = [
         {
-            "frontend": [
-                {
-                    name: 'React',
-                    icon: '/icons/react.svg',
-                    url: 'https://reactjs.org/',
-                },
-                {
-                    name: 'Next.js',
-                    icon: '/icons/nextjs.svg',
-                    url: 'https://nextjs.org/',
-                },
-                {
-                    name: 'Tailwind CSS',
-                    icon: '/icons/tailwindcss.svg',
-                    url: 'https://tailwindcss.com/',
-                },
-                {
-                    name: 'Framer Motion',
-                    icon: '/icons/framer-motion.svg',
-                    url: 'https://www.framer.com/motion/',
-                },
-                {
-                    name: 'HTML',
-                    icon: '/icons/html.svg',
-                    url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-                },
-                {
-                    name: 'CSS',
-                    icon: '/icons/css.svg',
-                    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-                },
-            ],
             "backend": [
                 {
                     name: 'Node.js',
