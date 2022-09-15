@@ -107,30 +107,36 @@ export default function Stack() {
         },
     ]
 
-    const stack = [
+    const learning = [
         {
-            "learning": [
-                {
-                    name: 'Deno',
-                    icon: '/icons/deno.svg',
-                    url: 'https://deno.land/',
-                },
-                {
-                    name: 'Fresh',
-                    icon: '/icons/fresh.svg',
-                    url: 'https://fresh.deno.dev/',
-                },
-                {
-                    name: 'Astro',
-                    icon: '/icons/astro.svg',
-                    url: 'https://astro.build/',
-                },
-                {
-                    name: 'GraphQL',
-                    icon: '/icons/graphql.svg',
-                    url: 'https://graphql.org/',
-                },
-            ],
+            name: 'Deno',
+            icon: '/icons/deno.svg',
+            url: 'https://deno.land/',
+        },
+        {
+            name: 'Fresh',
+            icon: '/icons/fresh.svg',
+            url: 'https://fresh.deno.dev/',
+        },
+        {
+            name: 'Astro',
+            icon: '/icons/astro.svg',
+            url: 'https://astro.build/',
+        },
+        {
+            name: 'three.js',
+            icon: '/icons/threejs.svg',
+            url: 'https://threejs.org/',
+        },
+        {
+            name: 'tRPC',
+            icon: '/icons/trpc.svg',
+            url: 'https://trpc.io/',
+        },
+        {
+            name: 'GraphQL',
+            icon: '/icons/graphql.svg',
+            url: 'https://graphql.org/',
         },
     ]
 
