@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Stack() {
 
     const frontend = [
@@ -143,15 +145,14 @@ export default function Stack() {
     return (
         <div className='backdrop-blur-sm my-8'>
             <h1 className='text-xl text-white font-bold'>Technologies</h1>
-            <div className='flex flex-wrap justify-center gap-2 my-4'>
-                {
-                    stack.map((tech) => (
-                        <button className={`flex flex-col items-center border px-6 py-1 rounded-full
-                            hover:border-transparent transition-all`} key={tech.name}>
-                            <p>{tech.name}</p>
-                        </button>
-                    ))
-                }
+            <div className='grid justify-center gap-2 my-4'>
+                <div className='grid grid-cols-3 gap-8'>
+                    {
+                        frontend.map((tech) => (
+                            <Image src={tech.icon} key={tech.name} alt={tech.name} width={45} height={45} />
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
