@@ -145,7 +145,7 @@ export default function Stack() {
             <h1 className='text-xl text-white font-bold'>Technologies</h1>
             <div className='flex flex-wrap justify-center gap-2 my-4'>
                 {
-                    stack.map((tech) => (
+                    frontend.map((tech) => (
                         <button className={`flex flex-col items-center border px-6 py-1 rounded-full
                             hover:border-transparent transition-all`} key={tech.name}>
                             <p>{tech.name}</p>
