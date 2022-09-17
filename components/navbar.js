@@ -43,8 +43,8 @@ export default function Nabvar() {
 
     return (
         <div className={`fixed top-0 z-50 w-full px-6
-                backdrop-blur-sm border-b-2 transition-all
-                ${scroll ? 'border-zinc-900' : 'border-transparent'}`}>
+                backdrop-blur-sm border-b transition-colors duration-300 
+                ${scroll ? 'border-gray bg-dark/50 ease-in' : 'ease-out border-transparent'}`}>
             <div className={`md:max-w-3xl mx-auto flex items-center justify-between h-20 relative`}>
                 <div className='hidden md:block md:-ml-4 text-sm'>
                     {navLinks}
