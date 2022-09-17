@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from './icons/react'
 import Nextjs from './icons/nextjs'
 import TailwindCSS from './icons/tailwindcss'
@@ -151,11 +150,11 @@ export default function Stack() {
     return (
         <div className='backdrop-blur-sm my-8'>
             <h1 className='text-xl text-white font-bold'>Technologies</h1>
-            <div className='grid justify-center gap-2 my-4'>
+            <div className='grid gap-2 my-4'>
                 <div className='grid grid-cols-3 gap-8'>
                     {
-                        frontend.map((tech) => (
-                            <Image src={tech.icon} key={tech.name} alt={tech.name} width={45} height={45} />
+                        frontend.map(({ name, icon, url }) => (
+                            <a href={url} target='_black' rel='noreferrer' className='justify-self-center' key={name}>{icon}</a>
                         ))
                     }
                 </div>
