@@ -28,7 +28,7 @@ export default function Proyects() {
                                     <p className='text-stone text-sm'>{proyect.description}</p>
                                 </div>
                                 <a href={proyect.github} target='_blank' rel='noreferrer'>
-                                    <Github className={'white'} />
+                                    <Github />
                                 </a>
                             </div>
                             <div className='shadow-md'>
