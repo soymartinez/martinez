@@ -1,36 +1,42 @@
 import Image from 'next/image'
+import React from './icons/react'
+import Nextjs from './icons/nextjs'
+import TailwindCSS from './icons/tailwindcss'
+import Javascript from './icons/javascript'
+import HTML from './icons/html'
+import CSS from './icons/css'
 
 export default function Stack() {
 
     const frontend = [
         {
             name: 'React',
-            icon: '/icons/react.svg',
+            icon: <React />,
             url: 'https://reactjs.org/',
         },
         {
             name: 'Next.js',
-            icon: '/icons/nextjs.svg',
+            icon: <Nextjs />,
             url: 'https://nextjs.org/',
         },
         {
             name: 'Tailwind CSS',
-            icon: '/icons/tailwindcss.svg',
+            icon: <TailwindCSS />,
             url: 'https://tailwindcss.com/',
         },
         {
-            name: 'Framer Motion',
-            icon: '/icons/framer-motion.svg',
-            url: 'https://www.framer.com/motion/',
+            name: 'Javascript',
+            icon: <Javascript />,
+            url: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
         },
         {
             name: 'HTML',
-            icon: '/icons/html.svg',
+            icon: <HTML />,
             url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
         },
         {
             name: 'CSS',
-            icon: '/icons/css.svg',
+            icon: <CSS />,
             url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
         },
     ]
