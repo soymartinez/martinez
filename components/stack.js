@@ -4,6 +4,12 @@ import TailwindCSS from './icons/tailwindcss'
 import Javascript from './icons/javascript'
 import HTML from './icons/html'
 import CSS from './icons/css'
+import Nodejs from './icons/nodejs'
+import Prisma from './icons/prisma'
+import Mongodb from './icons/mongodb'
+import Postgresql from './icons/postgresql'
+import Supabase from './icons/supabase'
+import Firebase from './icons/firebase'
 
 export default function Stack() {
 
@@ -43,37 +49,32 @@ export default function Stack() {
     const backend = [
         {
             name: 'Node.js',
-            icon: '/icons/nodejs.svg',
+            icon: <Nodejs />,
             url: 'https://nodejs.org/en/',
         },
         {
-            name: 'Express.js',
-            icon: '/icons/expressjs.svg',
-            url: 'https://expressjs.com/',
-        },
-        {
             name: 'Prisma',
-            icon: '/icons/prisma.svg',
+            icon: <Prisma />,
             url: 'https://www.prisma.io/',
         },
         {
             name: 'MongoDB',
-            icon: '/icons/mongodb.svg',
+            icon: <Mongodb />,
             url: 'https://www.mongodb.com/',
         },
         {
             name: 'PostgreSQL',
-            icon: '/icons/postgresql.svg',
+            icon: <Postgresql />,
             url: 'https://www.postgresql.org/',
         },
         {
             name: 'Supabase',
-            icon: '/icons/supabase.svg',
+            icon: <Supabase />,
             url: 'https://supabase.io/',
         },
         {
             name: 'Firebase',
-            icon: '/icons/firebase.svg',
+            icon: <Firebase />,
             url: 'https://firebase.google.com/',
         },
     ]
@@ -154,6 +155,13 @@ export default function Stack() {
                 <div className='grid grid-cols-3 gap-8'>
                     {
                         frontend.map(({ name, icon, url }) => (
+                            <a href={url} target='_black' rel='noreferrer' className='justify-self-center' key={name}>{icon}</a>
+                        ))
+                    }
+                </div>
+                <div className='grid grid-cols-3 gap-8'>
+                    {
+                        backend.map(({ name, icon, url }) => (
                             <a href={url} target='_black' rel='noreferrer' className='justify-self-center' key={name}>{icon}</a>
                         ))
                     }
