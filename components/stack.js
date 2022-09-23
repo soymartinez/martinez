@@ -10,6 +10,9 @@ import Mongodb from './icons/mongodb'
 import Postgresql from './icons/postgresql'
 import Supabase from './icons/supabase'
 import Firebase from './icons/firebase'
+import Vscode from './icons/vscode'
+import Figma from './icons/figma'
+import Framer from './icons/framer'
 
 export default function Stack() {
 
@@ -82,27 +85,17 @@ export default function Stack() {
     const software = [
         {
             name: 'VS Code',
-            icon: '/icons/vscode.svg',
+            icon: <Vscode />,
             url: 'https://code.visualstudio.com/',
         },
         {
-            name: 'Git',
-            icon: '/icons/git.svg',
-            url: 'https://git-scm.com/',
-        },
-        {
-            name: 'GitHub',
-            icon: '/icons/github.svg',
-            url: 'https://github.com/'
-        },
-        {
             name: 'Figma',
-            icon: '/icons/figma.svg',
+            icon: <Figma />,
             url: 'https://www.figma.com/',
         },
         {
             name: 'Framer',
-            icon: '/icons/framer.svg',
+            icon: <Framer />,
             url: 'https://www.framer.com/',
         }
     ]
