@@ -159,6 +159,13 @@ export default function Stack() {
                         ))
                     }
                 </div>
+                <div className='grid grid-cols-3 gap-8'>
+                    {
+                        software.map(({ name, icon, url }) => (
+                            <a href={url} target='_black' rel='noreferrer' className='justify-self-center' key={name}>{icon}</a>
+                        ))
+                    }
+                </div>
             </div>
         </section>
     )
