@@ -144,7 +144,7 @@ export default function Stack() {
     return (
         <section className='flex flex-col gap-6'>
             <h1 className='text-xl text-white font-bold'>Technologies</h1>
-            <div className='grid gap-2'>
+            <div className='grid md:grid-cols-2 gap-8'>
                 <div className='grid grid-cols-3 gap-8'>
                     {
                         frontend.map(({ name, icon, url }) => (
