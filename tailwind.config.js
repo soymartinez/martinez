@@ -17,6 +17,7 @@ module.exports = {
       },
       animation: {
         'smooth': 'smooth 60s ease-in-out infinite',
+        'smooth2': 'smooth2 60s ease-in-out infinite',
       },
       keyframes: {
         'smooth': {
@@ -24,6 +25,13 @@ module.exports = {
           '10%': { transform: 'translateX(-50px)' },
           '80%': { transform: 'translateY(500px)' },
           '50%': { transform: 'translateX(200px)' },
+        },
+        'smooth2': {
+          '0%': { transform: 'translateX(150%)' },
+          '25%': { transform: 'translateX(280%)' },
+          '50%': { transform: 'translate(150%, 50%)' },
+          '75%': { transform: 'translateX(250%)' },
+          '100%': { transform: 'translateX(150%)' },
         },
       }
     },
