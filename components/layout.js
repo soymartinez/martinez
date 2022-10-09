@@ -3,7 +3,7 @@ import Nabvar from './navbar'
 
 export default function Layout({ title, children }) {
     return (
-        <div className='relative overflow-x-hidden'>
+        <div className='relative overflow-x-hidden h-screen'>
             <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth md:animate-smooth2' />
             <Head>
                 <title>{title}</title>
