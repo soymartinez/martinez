@@ -10,8 +10,8 @@ export default function About() {
                     <ul>
                         <li>Twitter: <a href='https://twitter.com/omgismartinez'>@omgismartinez</a></li>
                         <li>GitHub: <a href='https://github.com/omgismartinez'>@omgismartinez</a></li>
-                        <li>Website: <a href='https://martinez.vercel.app'>@omgismartinez</a></li>
-                        <li>LinkedIn: <a href='https://linkedin.com/in/omgismartinez'>@omgismartinez</a></li>
+                        <li>Website: <a href='https://martinez.vercel.app'>https://martinez.vercel.app</a></li>
+                        <li>LinkedIn: <a href='https://linkedin.com/in/omgismartinez'>https://linkedin.com/in/omgismartinez</a></li>
                     </ul>
                 </section>
                 <section>
