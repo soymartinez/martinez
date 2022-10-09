@@ -16,7 +16,7 @@ export default function About() {
                     <h1 className='text-xl text-white font-bold'>Links</h1>
                     <ul className='flex flex-col gap-2 pl-6 transition-colors'>
                         {Links.map(({ name, url, username }) => (
-                            <li className='transition-all text-neutral'>
+                            <li key={name} className='transition-all text-neutral'>
                                 {name}: <a className='mix-blend-difference font-medium text-primary hover:opacity-60 underline' href={url}>{username || url}</a>
                             </li>
                         ))}
