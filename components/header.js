@@ -11,7 +11,7 @@ export default function Header() {
                     <span className='text-neutral'>
                         Frontend Developer, JS Developer.
                     </span>
-                    <span className='mt-3 mix-blend-difference text-stone'>
+                    <span className='mt-3'>
                         {`I building web apps with React / Next.js and Tailwind CSS and more.
                         I'm a JavaScript enthusiast and I love doing design and UI.`}
                     </span>
