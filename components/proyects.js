@@ -19,7 +19,7 @@ export default function Proyects() {
             <div className='grid md:grid-cols-2 gap-4'>
                 {
                     proyects.map(proyect => (
-                        <section key={proyect.title} className={'overflow-hidden relative rounded-xl'}>
+                        <section key={proyect.title} className={`overflow-hidden relative rounded-xl ${proyect.title && 'animate-fade'}`}>
                             <div className='flex flex-col backdrop-blur-3xl overflow-hidden'>
                                 <div className='flex items-center justify-between py-4 px-6'>
                                     <div className='truncate'>
