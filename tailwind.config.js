@@ -18,6 +18,7 @@ module.exports = {
       animation: {
         'smooth': 'smooth 60s ease-in-out infinite',
         'smooth2': 'smooth2 60s ease-in-out infinite',
+        'fade': 'fade 1s ease-in-out',
       },
       keyframes: {
         'smooth': {
@@ -33,6 +34,11 @@ module.exports = {
           '75%': { transform: 'translateX(250%)' },
           '100%': { transform: 'translateX(150%)' },
         },
+        'fade': {
+          '0%': { opacity: '0', filter: 'brightness(1) blur(20px)' },
+          '10%': { opacity: '1', filter: 'brightness(2) blur(10px)' },
+          '100%': { opacity: '1', filter: 'brightness(1) blur(0)' },
+        }
       }
     },
   },
