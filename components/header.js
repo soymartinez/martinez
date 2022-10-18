@@ -16,7 +16,7 @@ export default function Header() {
                         I'm a JavaScript enthusiast and I love doing design and UI.`}
                     </span>
                 </div>
-                <div className='my-6 sm:my-0 sm:w-[170px] w-[80px]'>
+                <div className='my-6 sm:my-0 sm:w-[170px] w-[80px] animate-fade'>
                     <Image src={'https://avatars.githubusercontent.com/u/72507996?v=4'}
                         className='rounded-full' alt='profile' layout='responsive' width={40} height={40} />
                 </div>
