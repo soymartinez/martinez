@@ -28,11 +28,10 @@ module.exports = {
           '50%': { transform: 'translateX(200px)' },
         },
         'smooth2': {
-          '0%': { transform: 'translateX(150%)' },
-          '25%': { transform: 'translateX(280%)' },
+          '0%, 100%': { transform: 'translateX(280%)' },
+          '25%': { transform: 'translateX(200%)' },
           '50%': { transform: 'translate(150%, 50%)' },
-          '75%': { transform: 'translateX(250%)' },
-          '100%': { transform: 'translateX(150%)' },
+          '75%': { transform: 'translate(230%, 80%)' },
         },
         'fade': {
           '0%': { opacity: '0', filter: 'brightness(1) blur(20px)' },
