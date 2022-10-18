@@ -20,10 +20,10 @@ export default function Nabvar() {
 
     const router = useRouter()
     const nav = [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Projects', href: '/projects' },
-        { name: 'Contact', href: '/contact' },
+        { name: 'Home', href: '/', status: true },
+        { name: 'About', href: '/about', status: true },
+        { name: 'Projects', href: '/projects', status: false },
+        { name: 'Contact', href: '/contact', status: false },
     ]
 
     const mode = (
@@ -31,11 +31,11 @@ export default function Nabvar() {
     )
 
     const navLinks = (
-        nav.map(nav => (
-            <Link href={nav.href} key={nav.name}>
+        nav.map(({href, name, status}) => (
+            <Link href={status ? href : '#'} key={name}>
                 <a className={`md:px-4 py-2 hover:text-white font-semibold hover:translate-x-1 transition-all
-                            ${router.asPath == nav.href ? 'text-white' : ''}`}>
-                    {nav.name}
+                            ${router.asPath == href ? 'text-white' : ''} ${!status && 'opacity-30'}`}>
+                    {name}
                 </a>
             </Link>
         ))
