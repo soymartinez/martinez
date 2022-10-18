@@ -17,7 +17,7 @@ export default function About() {
                     <ul className='flex flex-col gap-2 pl-6 transition-colors'>
                         {Links.map(({ name, url, username }) => (
                             <li key={name} className='transition-all text-neutral'>
-                                {name}: <a className='mix-blend-difference font-medium text-primary hover:opacity-60 underline' href={url}>{username || url}</a>
+                                {name}: <a className='font-medium text-white/90 hover:opacity-60 underline' href={url}>{username || url}</a>
                             </li>
                         ))}
                     </ul>
