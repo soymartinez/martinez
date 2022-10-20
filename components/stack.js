@@ -4,6 +4,7 @@ import TailwindCSS from './icons/tailwindcss'
 import Javascript from './icons/javascript'
 import HTML from './icons/html'
 import CSS from './icons/css'
+import Vercel from './icons/vercel'
 import Nodejs from './icons/nodejs'
 import Prisma from './icons/prisma'
 import Mongodb from './icons/mongodb'
@@ -46,6 +47,11 @@ export default function Stack() {
             name: 'CSS',
             icon: <CSS />,
             url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+        },
+        {
+            name: 'Vercel',
+            icon: <Vercel />,
+            url: 'https://vercel.com/',
         },
     ]
 
