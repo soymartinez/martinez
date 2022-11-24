@@ -10,6 +10,14 @@ const proyects = [
         technologies: ['Next.js', 'TailwindCSS', 'Supabase', 'NextAuth'],
         github: 'https://github.com/omgismartinez/fitstore',
     },
+    {
+        title: 'buu',
+        description: 'find your university.',
+        image: '/buu.png',
+        url: 'https://buu.vercel.app',
+        technologies: ['Next.js', 'TailwindCSS', 'tRPC', 'Prisma', 'Supabase', 'NextAuth'],
+        github: 'https://github.com/omgismartinez/buu',
+    },
 ]
 
 export default function Proyects() {
