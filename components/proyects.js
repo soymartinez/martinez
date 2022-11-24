@@ -4,7 +4,7 @@ import Github from './icons/github'
 const proyects = [
     {
         title: 'fitstore',
-        description: 'suplements store.',
+        description: 'supplement store.',
         image: '/fitstore.png',
         url: 'https://fitstore.vercel.app',
         technologies: ['Next.js', 'TailwindCSS', 'Supabase', 'NextAuth'],
