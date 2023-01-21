@@ -49,22 +49,25 @@ export default function Nabvar() {
     )
 
     return (
-        <div className={`fixed top-0 z-50 w-full px-6
+        <>
+            <div className={`fixed top-0 z-50 w-full px-6
                 backdrop-blur-sm border-b transition-colors duration-300 
                 ${scroll ? 'border-gray bg-dark/50 ease-in' : 'ease-out border-transparent'}`}>
-            <div className={`md:max-w-3xl mx-auto flex items-center justify-between h-20 relative`}>
-                <div className='hidden md:block md:-ml-4 text-sm'>
-                    {navLinks}
-                </div>
-                <div>
-                    <MenuButton />
-                    <div className={`flex flex-col absolute w-full top-20 p-6 bg-dark/60 backdrop-blur-sm rounded-xl 
-                        space-y-4 text-lg transition-all ${isActive ? 'opacity-100' : 'hidden'}`}>
+                <div className={`md:max-w-3xl mx-auto flex items-center justify-between h-20 relative`}>
+                    <div className='hidden md:block md:-ml-4 text-sm'>
                         {navLinks}
                     </div>
+                    <div className='md:hidden'>
+                        <MenuButton />
+                    </div>
+                    {/* {mode} */}
                 </div>
-                {/* {mode} */}
             </div>
-        </div>
+            <div className={`fixed inset-0 px-6 top-24 z-30 md:hidden transition duration-200 ${isActive ? 'translate-y-0' : '-translate-y-full'}`}>
+                <div className='flex flex-col w-full p-6 bg-black/50 backdrop-blur-md rounded-xl text-lg'>
+                    {navLinks}
+                </div>
+            </div>
+        </>
     )
 }
