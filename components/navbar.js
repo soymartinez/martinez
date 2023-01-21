@@ -26,12 +26,19 @@ export default function Nabvar() {
         { name: 'Contact', href: '/contact', status: false },
     ]
 
+    const MenuButton = () => (
+        <div className={`space-y-1 px-4 py-6 -ml-4 md:hidden ${isActive ? '-space-y-0.5' : ''}`} onClick={() => setIsActive(!isActive)}>
+            <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? 'rotate-45' : 'ml-2'}`}></div>
+            <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? '-rotate-45' : ''}`}></div>
+        </div>
+    )
+
     const mode = (
         <div className=''>Dark mode</div>
     )
 
     const navLinks = (
-        nav.map(({href, name, status}) => (
+        nav.map(({ href, name, status }) => (
             <Link href={status ? href : '#'} key={name}>
                 <a className={`md:px-4 py-2 hover:text-white font-semibold hover:translate-x-1 transition-all
                             ${router.asPath == href ? 'text-white' : ''} ${!status && 'opacity-30'}`}>
@@ -50,10 +57,7 @@ export default function Nabvar() {
                     {navLinks}
                 </div>
                 <div>
-                    <div className={`space-y-1 px-4 py-6 -ml-4 md:hidden ${isActive ? '-space-y-0.5' : ''}`} onClick={() => setIsActive(!isActive)}>
-                        <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? 'rotate-45' : 'ml-2'}`}></div>
-                        <div className={`w-5 h-0.5 bg-white transition-all rounded-full ${isActive ? '-rotate-45' : ''}`}></div>
-                    </div>
+                    <MenuButton />
                     <div className={`flex flex-col absolute w-full top-20 p-6 bg-dark/60 backdrop-blur-sm rounded-xl 
                         space-y-4 text-lg transition-all ${isActive ? 'opacity-100' : 'hidden'}`}>
                         {navLinks}
