@@ -40,10 +40,10 @@ export default function Nabvar() {
     const navLinks = (
         nav.map(({ href, name, status }) => (
             <Link href={status ? href : '#'} key={name}>
-                <a className={`md:px-4 py-2 hover:text-white font-semibold hover:translate-x-1 transition-all
+                <span className={`md:px-4 py-2 hover:text-white font-semibold hover:translate-x-1 transition-all
                             ${router.asPath == href ? 'text-white' : ''} ${!status && 'opacity-30'}`}>
                     {name}
-                </a>
+                </span>
             </Link>
         ))
     )
