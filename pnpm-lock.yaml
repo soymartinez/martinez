@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@next/font': ^13.1.6
   '@types/node': 18.13.0
   '@types/react': 18.0.28
   autoprefixer: 10.4.7
@@ -16,6 +17,7 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
+  '@next/font': 13.1.6
   isomorphic-unfetch: 3.1.0
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -82,6 +84,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.1.6:
+    resolution: {integrity: sha512-AITjmeb1RgX1HKMCiA39ztx2mxeAyxl4ljv2UoSBUGAbFFMg8MO7YAvjHCgFhD39hL7YTbFjol04e/BPBH5RzQ==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.1.6:
     resolution: {integrity: sha512-F3/6Z8LH/pGlPzR1AcjPFxx35mPqjE5xZcf+IL+KgbW9tMkp7CYi1y7qKrEWU7W4AumxX/8OINnDQWLiwLasLQ==}
