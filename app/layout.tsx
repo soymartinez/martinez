@@ -14,7 +14,14 @@ export default function RootLayout({
   return (
     <html lang='en' className='dark' style={{ colorScheme: 'dark' }}>
       <head />
-      <body className={`dark:bg-dark ${font.variable} font-sans`}>{children}</body>
+      <body className={`dark:bg-dark ${font.variable} font-sans`}>
+        <div className='relative overflow-hidden'>
+          <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth md:animate-smooth2' />
+          <main className='relative px-6 py-20'>
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   )
 }
