@@ -22,22 +22,22 @@ module.exports = {
         'green': '#1ed760',
       },
       animation: {
-        'smooth': 'smooth 60s ease-in-out infinite',
-        'smooth2': 'smooth2 60s ease-in-out infinite',
+        'smooth': 'smooth 30s ease-in-out infinite',
+        'smooth2': 'smooth2 30s ease-in-out infinite',
         'fade': 'fade 1s ease-in-out',
       },
       keyframes: {
         'smooth': {
-          '0%': { transform: 'translateY(50)' },
-          '10%': { transform: 'translateX(-50px)' },
-          '80%': { transform: 'translateY(500px)' },
-          '50%': { transform: 'translateX(200px)' },
+          '0%, 100%': { transform: 'translate(30vw)' },
+          '25%': { transform: 'translateX(-20vw)' },
+          '50%': { transform: 'translate(40vw, 30vh)' },
+          '75%': { transform: 'translateY(80vh)' },
         },
         'smooth2': {
-          '0%, 100%': { transform: 'translateX(280%)' },
-          '25%': { transform: 'translateX(200%)' },
-          '50%': { transform: 'translate(150%, 50%)' },
-          '75%': { transform: 'translate(230%, 80%)' },
+          '0%, 100%': { transform: 'translate(55vw, -4vh)' },
+          '25%': { transform: 'translateX(30vw)' },
+          '50%': { transform: 'translate(20vw, 30vh)' },
+          '75%': { transform: 'translate(55vw, 30vh)' },
         },
         'fade': {
           '0%': { opacity: '0', filter: 'brightness(1) blur(20px)' },
