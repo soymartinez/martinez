@@ -3,14 +3,14 @@
 import fetcher from 'lib/fetcher'
 import Image from 'next/image'
 import useSWR from 'swr'
-import IconSpotify from './iconSpotify'
+import SpotifyIcon from './icons/spotify'
 
 export default function Spotify() {
     const { data } = useSWR('/api/spotify', fetcher)
 
     const notPlaying = (
         <div className='flex gap-2'>
-            <IconSpotify />
+            <SpotifyIcon />
             <span className='text-white font-semibold'>Not Playing</span>
             –
             <span className='font-medium'>Spotify</span>
