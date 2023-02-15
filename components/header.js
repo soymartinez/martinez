@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Github from './icons/github'
+import Twitter from './icons/twitter'
 
 export default function Header() {
     return (
@@ -30,6 +32,22 @@ export default function Header() {
                         }} />
                 </div>
             </div>
+            <section className='flex gap-6 mt-4'>
+                <a
+                    href='https://twitter.com/omgismartinez'
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-[#1da1f2]'>
+                    <Twitter size={17} /> <span className='text-white'>Twitter</span>
+                </a>
+                <a
+                    href='https://github.com/omgismartinez'
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-[#ffffff]'>
+                    <Github size={16} title={false} /> <span className='text-white'>GitHub</span>
+                </a>
+            </section>
         </header>
     );
 }
