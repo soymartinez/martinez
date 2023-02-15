@@ -30,10 +30,11 @@ export default function Nabvar() {
             'border-gray bg-dark/50 ease-in': scroll,
             'ease-out border-transparent': !scroll,
         })}>
-            <div className={`md:max-w-3xl mx-auto flex h-20 relative`}>
-                <div className='flex items-center text-sm'>
+            <div className={`md:max-w-3xl mx-auto ml-auto flex justify-between items-center h-20 relative`}>
+                <div className='not-sr-only' />
+                <div className='flex gap-8'>
                     {nav.map(({ href, name }) => (
-                        <Link href={href} key={name} className={clsx('hover:text-white font-semibold transition-all', {
+                        <Link href={href} key={name} className={clsx('text-sm hover:text-white font-semibold transition-all', {
                             'hidden': pathName === href,
                         })}>
                             {name}
