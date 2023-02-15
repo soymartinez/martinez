@@ -1,7 +1,7 @@
 'use client'
 
 import fetcher from 'lib/fetcher'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import useSWR from 'swr'
 import IconSpotify from './iconSpotify'
 
