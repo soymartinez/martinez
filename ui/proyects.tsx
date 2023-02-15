@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Github from './icons/github'
+import Github from 'ui/icons/github'
 
 const proyects = [
     {
