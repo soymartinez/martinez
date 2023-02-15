@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function Nabvar() {
@@ -18,14 +18,14 @@ export default function Nabvar() {
             }
         }
         window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
     }, []);
 
-    const router = useRouter()
+    const pathName = usePathname()
     const nav = [
-        { name: 'Home', href: '/', status: true },
-        { name: 'About', href: '/about', status: true },
-        { name: 'Projects', href: '/projects', status: false },
-        { name: 'Contact', href: '/contact', status: false },
+        { name: 'Home', href: '/' },
+        { name: 'Blog', href: '/blog' },
     ]
 
     const MenuButton = () => (
@@ -40,10 +40,10 @@ export default function Nabvar() {
     )
 
     const navLinks = (
-        nav.map(({ href, name, status }) => (
-            <Link href={status ? href : '#'} key={name}>
+        nav.map(({ href, name }) => (
+            <Link href={href} key={name}>
                 <span className={`md:px-4 py-2 hover:text-white font-semibold hover:translate-x-1 transition-all
-                            ${router.asPath == href ? 'text-white' : ''} ${!status && 'opacity-30'}`}>
+                            ${pathName === href ? 'text-white' : ''}`}>
                     {name}
                 </span>
             </Link>
