@@ -1,4 +1,4 @@
-export default function IconSpotify() {
+export default function Spotify() {
     return (
         <svg
             width="25px"
