@@ -11,14 +11,12 @@ export default function Nabvar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setScroll(true)
-            } else {
-                setScroll(false)
-            }
+            window.scrollY > 0
+                ? setScroll(true)
+                : setScroll(false)
         }
-        window.addEventListener('scroll', handleScroll)
 
+        window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
