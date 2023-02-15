@@ -1,7 +1,7 @@
-import Header from 'components/header'
-import Proyects from 'components/proyects'
-import Stack from 'components/stack'
-import Spotify from 'components/spotify'
+import Header from 'ui/header'
+import Proyects from 'ui/proyects'
+import Stack from 'ui/stack'
+import Spotify from 'ui/spotify'
 
 export default function Home() {
     return (
