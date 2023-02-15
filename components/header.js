@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image'
 
 export default function Header() {
     return (
@@ -17,10 +17,19 @@ export default function Header() {
                     </span>
                 </div>
                 <div className='my-6 sm:my-0 sm:w-[170px] w-[80px] animate-fade'>
-                    <Image src={'https://avatars.githubusercontent.com/u/72507996?v=4'}
-                        className='rounded-full' alt='profile' layout='responsive' width={40} height={40} />
+                    <Image
+                        src={'https://avatars.githubusercontent.com/u/72507996?v=4'}
+                        className='rounded-full'
+                        alt='profile'
+                        width={40}
+                        height={40}
+                        sizes="100vw"
+                        style={{
+                            width: "100%",
+                            height: "auto"
+                        }} />
                 </div>
             </div>
         </header>
-    )
+    );
 }

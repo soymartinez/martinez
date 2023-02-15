@@ -1,7 +1,7 @@
 'use client'
 
 import fetcher from 'lib/fetcher'
-import Image from "next/legacy/image";
+import Image from 'next/image'
 import useSWR from 'swr'
 import IconSpotify from './iconSpotify'
 
@@ -30,8 +30,17 @@ export default function Spotify() {
             {data.albumImageUrl ?
                 <div className='flex gap-2 overflow-hidden'>
                     <div className='flex justify-center items-center'>
-                        <Image src={data.albumImageUrl} alt={data.album} width={25} height={25} priority
-                            className='rounded-full z-20' />
+                        <Image
+                            src={data.albumImageUrl}
+                            alt={data.album}
+                            width={25}
+                            height={25}
+                            priority
+                            className='rounded-full z-20'
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                         <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
                     </div>
                     <strong className='text-white font-semibold whitespace-nowrap'>{data.title}</strong>

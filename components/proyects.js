@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image'
 import Github from './icons/github'
 
 const proyects = [
@@ -41,8 +41,19 @@ export default function Proyects() {
                                     </a>
                                 </div>
                                 <div className='shadow-md'>
-                                    <Image src={proyect.image} priority={true}
-                                        className='rounded-xl' alt={proyect.title} width={400} height={200} layout='responsive' objectFit='contain' />
+                                    <Image
+                                        src={proyect.image}
+                                        priority={true}
+                                        className='rounded-xl'
+                                        alt={proyect.title}
+                                        width={400}
+                                        height={200}
+                                        sizes="100vw"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                            objectFit: "contain"
+                                        }} />
                                 </div>
                             </div>
                         </section>
@@ -50,5 +61,5 @@ export default function Proyects() {
                 }
             </div>
         </section>
-    )
+    );
 }
