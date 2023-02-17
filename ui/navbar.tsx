@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import clsx from 'clsx'
+import Mode from './mode'
 
 export default function Nabvar() {
     const [scroll, setScroll] = useState(false)
@@ -40,6 +41,8 @@ export default function Nabvar() {
                             {name}
                         </Link>
                     ))}
+
+                    <Mode />
                 </div>
             </div>
         </div>
