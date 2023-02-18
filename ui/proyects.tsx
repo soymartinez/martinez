@@ -23,7 +23,7 @@ const proyects = [
 export default function Proyects() {
     return (
         <section className='flex flex-col gap-6'>
-            <h1 className='text-xl text-white font-bold'>Proyects</h1>
+            <h1 className='text-xl text-dark dark:text-white font-bold'>Proyects</h1>
             <div className='grid md:grid-cols-2 gap-4'>
                 {
                     proyects.map(proyect => (
@@ -32,9 +32,9 @@ export default function Proyects() {
                                 <div className='flex items-center justify-between py-4 px-6'>
                                     <div className='truncate'>
                                         <a href={proyect.url} target='_blank' rel='noreferrer'>
-                                            <h1 className='text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
+                                            <h1 className='text-dark dark:text-white font-semibold text-xl z-20 hover:underline'>{proyect.title}</h1>
                                         </a>
-                                        <p className='text-stone text-sm'>{proyect.description}</p>
+                                        <p className='text-dark/60 mix-blend-darken dark:text-inherit text-sm'>{proyect.description}</p>
                                     </div>
                                     <a href={proyect.github} target='_blank' rel='noreferrer'>
                                         <Github />
