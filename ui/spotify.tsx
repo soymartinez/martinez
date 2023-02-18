@@ -5,8 +5,17 @@ import Image from 'next/image'
 import useSWR from 'swr'
 import SpotifyIcon from './icons/spotify'
 
+interface SpotifyData {
+    album: string
+    albumImageUrl: string
+    artist: string
+    isPlaying: boolean
+    songUrl: string
+    title: string
+}
+
 export default function Spotify() {
-    const { data } = useSWR('/api/spotify', fetcher)
+    const { data } = useSWR<SpotifyData>('/api/spotify', fetcher)
 
     const notPlaying = (
         <div className='flex gap-2'>
@@ -28,22 +37,24 @@ export default function Spotify() {
     return (
         <div className='flex justify-start items-center gap-2'>
             {data.albumImageUrl ?
-                <div className='flex gap-2 truncate'>
-                    <div className='flex justify-center items-center'>
-                        <Image
-                            src={data.albumImageUrl}
-                            alt={data.album}
-                            width={25}
-                            height={25}
-                            priority
-                            className='rounded-full z-20 object-contain'
-                        />
-                        <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
+                <a href={data.songUrl} rel={'noreferrer'} target={'_blank'}>
+                    <div className='flex gap-2 truncate'>
+                        <div className='flex justify-center items-center'>
+                            <Image
+                                src={data.albumImageUrl}
+                                alt={data.album}
+                                width={25}
+                                height={25}
+                                priority
+                                className='rounded-full z-20 object-contain'
+                            />
+                            <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
+                        </div>
+                        <strong className='text-dark dark:text-white font-semibold truncate'>{data.title}</strong>
+                        –
+                        <strong className='font-medium truncate'>{data.artist}</strong>
                     </div>
-                    <strong className='text-dark dark:text-white font-semibold truncate'>{data.title}</strong>
-                    –
-                    <strong className='font-medium truncate'>{data.artist}</strong>
-                </div>
+                </a>
                 : notPlaying
             }
         </div>
