@@ -37,7 +37,7 @@ export default function Header() {
                     href='https://twitter.com/omgismartinez'
                     target={'_blank'}
                     rel={'noreferrer'}
-                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-[#1da1f2]'>
+                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-dark dark:decoration-[#1da1f2]'>
                     <Twitter size={17} /> <span className='dark:text-white text-dark'>Twitter</span>
                 </a>
                 <a
