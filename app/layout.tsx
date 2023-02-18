@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head />
-      <body className={`dark:bg-dark ${font.variable} font-sans`}>
+      <body className={`bg-light dark:bg-dark ${font.variable} font-sans`}>
         <Providers>
           <Navbar />
           <div className='relative overflow-hidden'>
