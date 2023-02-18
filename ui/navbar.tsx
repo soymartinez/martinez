@@ -16,7 +16,7 @@ export default function Nabvar() {
                 ? setScroll(true)
                 : setScroll(false)
         }
-
+        handleScroll()
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
