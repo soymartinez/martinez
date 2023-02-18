@@ -3,7 +3,7 @@ export default function Twitter({ size = 24 }) {
         <svg
             width={size}
             height={size}
-            className='text-[#1da1f2] mix-blend-difference dark:mix-blend-normal'
+            className='text-dark dark:text-[#1da1f2]'
             fill='currentColor'
             viewBox='0 0 24 24'
         >
