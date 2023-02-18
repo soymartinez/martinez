@@ -11,7 +11,7 @@ export default function Spotify() {
     const notPlaying = (
         <div className='flex gap-2'>
             <SpotifyIcon />
-            <span className='text-white font-semibold'>Not Playing</span>
+            <span className='text-dark dark:text-white font-semibold'>Not Playing</span>
             –
             <span className='font-medium'>Spotify</span>
         </div>
@@ -43,7 +43,7 @@ export default function Spotify() {
                             }} />
                         <div className='w-5 h-5 rounded-full bg-green animate-ping absolute z-10' />
                     </div>
-                    <strong className='text-white font-semibold whitespace-nowrap'>{data.title}</strong>
+                    <strong className='text-dark dark:text-white font-semibold whitespace-nowrap'>{data.title}</strong>
                     –
                     <strong className='font-medium whitespace-nowrap'>{data.artist}</strong>
                 </div>
