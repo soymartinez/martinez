@@ -35,7 +35,9 @@ export default function Nabvar() {
                 <div className='not-sr-only' />
                 <div className='flex gap-8'>
                     {nav.map(({ href, name }) => (
-                        <Link href={href} key={name} className={clsx('text-base hover:text-white font-medium transition-all', {
+                        <Link href={href} key={name} className={clsx(
+                            `text-base text-dark/50 dark:text-inherit hover:text-dark dark:hover:text-neutral
+                             mix-blend-multiply dark:mix-blend-normal font-medium hover:transition-all`, {
                             'hidden': pathName === href,
                         })}>
                             {name}
