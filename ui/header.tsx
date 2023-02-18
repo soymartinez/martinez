@@ -7,13 +7,13 @@ export default function Header() {
         <header>
             <div className='flex sm:flex-row flex-col-reverse'>
                 <div className='flex flex-col gap-1 sm:pr-6'>
-                    <h1 className='text-white text-3xl md:text-5xl font-bold'>
+                    <h1 className='text-dark dark:text-white text-3xl md:text-5xl font-bold'>
                         Alvaro Martinez
                     </h1>
-                    <span className='text-neutral'>
+                    <span className='dark:text-neutral text-gray'>
                         Frontend Developer, JS Developer.
                     </span>
-                    <span className='mt-3'>
+                    <span className='mt-3 mix-blend-multiply dark:mix-blend-normal'>
                         {`I building web apps with React / Next.js and Tailwind CSS and more.
                         I'm a JavaScript enthusiast and I love doing design and UI.`}
                     </span>
@@ -38,14 +38,14 @@ export default function Header() {
                     target={'_blank'}
                     rel={'noreferrer'}
                     className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-[#1da1f2]'>
-                    <Twitter size={17} /> <span className='text-white'>Twitter</span>
+                    <Twitter size={17} /> <span className='dark:text-white text-dark'>Twitter</span>
                 </a>
                 <a
                     href='https://github.com/omgismartinez'
                     target={'_blank'}
                     rel={'noreferrer'}
-                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-[#ffffff]'>
-                    <Github size={16} title={false} /> <span className='text-white'>GitHub</span>
+                    className='flex items-center gap-[6px] hover:underline underline-offset-4 decoration-2 decoration-dark dark:decoration-[#ffffff]'>
+                    <Github size={16} title={false} /> <span className='dark:text-white text-dark'>GitHub</span>
                 </a>
             </section>
         </header>
