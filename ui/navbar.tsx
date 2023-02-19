@@ -33,7 +33,7 @@ export default function Nabvar() {
         })}>
             <div className={`md:max-w-3xl mx-auto ml-auto flex justify-between items-center h-20 relative`}>
                 <div className='not-sr-only' />
-                <div className='flex gap-8'>
+                <div className='flex items-center gap-8'>
                     {nav.map(({ href, name }) => (
                         <Link href={href} key={name} className={clsx(
                             `text-base text-dark/50 dark:text-inherit hover:text-dark dark:hover:text-neutral
