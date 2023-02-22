@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { Familjen_Grotesk as Font } from '@next/font/google'
 import Navbar from 'ui/navbar'
 import { Providers } from 'ui/providers'
+import { Analytics } from 'components/analytics'
 
 const font = Font({
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({
             <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth md:animate-smooth2' />
             <main className='relative px-6 py-20 sm:pt-32'>
               {children}
+              <Analytics />
             </main>
           </div>
         </Providers>
