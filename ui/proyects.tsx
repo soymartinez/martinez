@@ -5,7 +5,7 @@ const proyects = [
     {
         title: 'fitstore',
         description: 'supplement store.',
-        image: '/fitstore.png',
+        image: '/fitstore.jpg',
         url: 'https://fitstore.vercel.app',
         technologies: ['Next.js', 'TailwindCSS', 'Supabase', 'NextAuth'],
         github: 'https://github.com/omgismartinez/fitstore',
@@ -13,7 +13,7 @@ const proyects = [
     {
         title: 'buu',
         description: 'find your university.',
-        image: '/buu.png',
+        image: '/buu.jpg',
         url: 'https://buu.vercel.app',
         technologies: ['Next.js', 'TailwindCSS', 'tRPC', 'Prisma', 'Supabase', 'NextAuth'],
         github: 'https://github.com/omgismartinez/buu',
