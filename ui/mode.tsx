@@ -116,17 +116,18 @@ export default function Mode() {
                 layout
                 animate={resolvedTheme}
                 transition={{ type: 'spring', stiffness: 600, damping: 30 }}
-                className='w-6 h-6 z-50 rounded-full'
+                className={clsx('w-6 h-6 z-50 rounded-full', {
+                    'bg-white': resolvedTheme === 'light',
+                    'bg-transparent': resolvedTheme === 'dark'
+                })}
                 variants={{
                     dark: {
                         boxShadow: 'inset 0px 0px white, inset 0px 13px 0px 0px white',
                         rotate: 120,
-                        background: 'transparent'
                     },
                     light: {
                         boxShadow: 'inset 0px 0px white, inset 0px 0px 0px 0px white',
                         rotate: 90,
-                        background: '#fff'
                     }
                 }}
                 initial={false}
