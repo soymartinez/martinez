@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { Familjen_Grotesk as Font } from '@next/font/google'
+import { Familjen_Grotesk as Font } from 'next/font/google'
 import Navbar from 'ui/navbar'
 import { Providers } from 'ui/providers'
 import { Analytics } from 'components/analytics'
