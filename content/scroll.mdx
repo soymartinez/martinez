@@ -1,0 +1,125 @@
+One of the challenges when creating a chat application is efficient scroll control, especially as new messages continue to arrive and older messages can get lost in the message container.
+
+![Twitch chat](https://images.squarespace-cdn.com/content/v1/556ce555e4b0bcb104348de7/1619044388415-J0RYV07SHMUZG2AKT2NO/chat4.gif)
+
+> In the chat app world, scroll is a critical feature that affects the user experience.
+
+In this post, we will learn how to create an efficient scroll in a chat application using `Next.js / React`. The logic can also be applied to `Vanilla JavaScript`.
+
+---
+
+## Just Show Me the Code
+
+Without further ado, here’s a scroll setup that handles both new and old messages:
+
+```css
+import { useState, useEffect, useRef } from 'react'
+
+function Chat() {
+  const [messages, setMessages] = useState<string[]>([])
+  const container = useRef<HTMLDivElement>(null)
+
+  const Scroll = () => {
+    const { offsetHeight, scrollHeight, scrollTop } = container.current as HTMLDivElement
+    if (scrollHeight <= scrollTop + offsetHeight + 100) {
+      container.current?.scrollTo(0, scrollHeight)
+    }
+  }
+
+  useEffect(() => {
+    Scroll()
+  }, [messages])
+
+  return <div ref={container}>{messages}</div>
+}
+```
+
+_Feel free to copy paste it in your project._
+
+**If you don’t care how this works, you can stop here! The rest of this post is for those who want to understand the logic behind the code.**
+
+---
+
+## Code Extraction
+
+Here I show you how to efficiently control the scroll in just 3 simple steps. It's actually quite simple.
+
+**1. Identify the message container.**
+
+This component is simple and only has the function of displaying messages. However, In complex apps, more styling is needed to make messages visually appealing.
+
+```css
+<div>{messages}</div>
+```
+
+**2. Get a reference to this element.**
+
+These properties must be mutable and must “persist” in new renderings, so it can't be a regular variable. We want something more like an instance field.
+
+`useRef()` gives us exactly that:
+
+```typescript 
+const container = useRef()
+```
+
+> _Hooks use a similar concept to store any value that can change. A reference is like a container where you can store anything._
+
+`useRef()` is a hook in React that allows you to access and manipulate a value that persists across multiple renders. It is ideal for storing properties, precisely what we need.
+
+```typescript 
+const container = useRef<HTMLDivElement>(null)
+
+<div ref={container}>{messages}</div>
+```
+
+**3. Access the relevant properties to control the scroll.**
+
+Before going deeper into the implementation, let's briefly describe the use of each property we are going to use:
+
+- The height of the element [scrollHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight).
+
+- The number of pixels that the content of the element has been vertically displaced [scrollTop](https://developer.mozilla.org/es/docs/Web/API/Element/scrollTop).
+
+- The height of the element, including vertical padding and borders [offsetHeight](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/offsetHeight).
+
+- Moves the viewer to a specific set of coordinates on the element [scrollTo](https://developer.mozilla.org/es/docs/Web/API/Window/scrollTo).
+
+Let's start by creating a function, which will be responsible for handling the scrolling logic in our chat application.
+
+```css
+const Scroll = () => {}
+```
+
+The `Scroll()` function checks the current scroll position of the element referenced by the `container` variable.
+
+In the following, we will use destructuring to access three of its important properties: `offsetHeight`, `scrollHeight` y `scrollTop`.
+
+```css
+const { offsetHeight, scrollHeight, scrollTop } = container.current as HTMLDivElement
+```
+
+Next, we do a comparison to determine if the user has reached the end of the content with a margin of `100 pixels`. If this condition is met, we use the `scrollTo` method to automatically scroll to the end of the content and view the last messages.
+
+```css
+if (scrollHeight <= scrollTop + offsetHeight + 100) {
+  container.current?.scrollTo(0, scrollHeight)
+}
+```
+
+**But when is it necessary to activate the function? 🤔**
+
+To do this, we use the `useEffect` hook of React, which allows us to execute a function at a specific time in the lifecycle of our application. In this case, we are saying that the `Scroll()` function should be executed every time the status of the `messages` in our chat application changes.
+
+```css
+useEffect(() => {
+  Scroll()
+}, [messages])
+```
+
+Thanks to `[messages]`, our effect is re-executed each time we receive a new message. In this way, we ensure that the Scroll function is executed each time a new message is added to the conversation.
+
+---
+
+## Closing Thoughts
+
+After adding the `Scroll()` feature to your chat application, it is important to remember that this is only a basic example. In more complex applications, more formatting and styling will probably be needed to make messages appealing to users, and additional features such as scroll pause or message search can also be added. Overall, scrolling logic is only one part of building a complete chat application and there is much more to do before it is ready for use.
