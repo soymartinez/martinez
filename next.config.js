@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    mdxRs: true,
   },
   images: {
     domains: [
@@ -12,4 +13,5 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+const whitMDX = require('@next/mdx')()
+module.exports = whitMDX(nextConfig)
