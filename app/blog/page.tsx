@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Content from 'content/scroll.mdx'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
     title: 'Blog',
@@ -9,8 +9,14 @@ export const metadata: Metadata = {
 export default async function Blog() {
     return (
         <main className='sm:max-w-3xl mx-auto'>
-            <h1 className='text-xl font-bold'>Blog</h1>
-            <Content />
+            <h1 className='text-2xl font-bold'>Blog</h1>
+            <section>
+                <div className='py-4'>
+                    <Link href={'/blog/real-scroll-for-a-chat-application'}>
+                        <h2 className='text-lg font-bold text-white'>Real Scroll for a Chat Application</h2>
+                    </Link>
+                </div>
+            </section>
         </main>
     )
 }
