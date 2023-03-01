@@ -1,11 +1,17 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { motion, Variants } from 'framer-motion'
 import clsx from 'clsx'
 
 export default function Mode() {
+    const [mounted, setMounted] = useState(false)
     const { resolvedTheme, setTheme } = useTheme()
+
+    useEffect(() => setMounted(true), [])
+
+    if (!mounted) return null
 
     const size = 25
 
