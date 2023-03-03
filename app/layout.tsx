@@ -52,13 +52,15 @@ export default function RootLayout({
       <body className={`bg-light dark:bg-dark ${font.variable} font-sans`}>
         <Providers>
           <Navbar />
-          <div className='relative overflow-hidden'>
+          <main className='relative overflow-hidden px-4'>
             <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth md:animate-smooth2' />
-            <main className='relative px-6 py-20 sm:pt-32'>
-              {children}
-              <Analytics />
-            </main>
-          </div>
+            <div className='sm:max-w-3xl mx-auto border-x border-stone/30 dark:border-[#363636]'>
+              <div className='relative py-20 sm:pt-32'>
+                {children}
+                <Analytics />
+              </div>
+            </div>
+          </main>
         </Providers>
       </body>
     </html>
