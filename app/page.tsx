@@ -5,11 +5,11 @@ import Spotify from 'ui/spotify'
 
 export default function Home() {
     return (
-        <main className='flex flex-col gap-8 sm:max-w-3xl mx-auto'>
+        <main className='flex flex-col gap-8'>
             <Header />
             <Proyects />
             <Stack />
             <Spotify />
-        </main >
+        </main>
     )
 }
