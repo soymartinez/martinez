@@ -27,9 +27,9 @@ export default function Nabvar() {
     ]
 
     return (
-        <div className={clsx('fixed top-0 z-50 w-full px-6 border-b transition-colors duration-300', {
-            'border-stone/20 bg-light/10 dark:border-gray dark:bg-dark/50 ease-in backdrop-blur-sm': scroll,
-            'ease-out border-transparent': !scroll,
+        <div className={clsx('fixed top-0 z-50 w-full px-4 border-b border-stone/30 dark:border-[#363636] transition-colors duration-300', {
+            'bg-light/10 dark:bg-dark/50 ease-in-out backdrop-blur-sm': scroll,
+            'transition-none': !scroll,
         })}>
             <div className={`md:max-w-3xl mx-auto ml-auto flex justify-between items-center h-20 relative`}>
                 <div className='not-sr-only' />
