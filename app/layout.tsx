@@ -54,7 +54,7 @@ export default function RootLayout({
           <Navbar />
           <main className='relative overflow-hidden px-4'>
             <div className='absolute rounded-full w-96 h-96 blur-3xl bg-primary animate-smooth md:animate-smooth2' />
-            <div className='sm:max-w-3xl mx-auto border-x border-stone/30 dark:border-[#363636]'>
+            <div className='sm:max-w-3xl mx-auto'>
               <div className='relative py-20 sm:pt-32'>
                 {children}
                 <Analytics />
