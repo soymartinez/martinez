@@ -8,6 +8,7 @@ const proyects = [
         image: '/rastreadito.jpg',
         url: 'https://rastreadito.vercel.app',
         technologies: ['Next.js', 'TailwindCSS', 'Prisma', 'Supabase'],
+        github: 'https://github.com/omgismartinez/rastreadito',
     },
     {
         title: 'fitstore',
