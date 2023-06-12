@@ -3,6 +3,13 @@ import Github from 'ui/icons/github'
 
 const proyects = [
     {
+        title: 'Rastreadito',
+        description: 'track your cannabis products.',
+        image: '/rastreadito.jpg',
+        url: 'https://rastreadito.vercel.app',
+        technologies: ['Next.js', 'TailwindCSS', 'Prisma', 'Supabase'],
+    },
+    {
         title: 'fitstore',
         description: 'supplement store.',
         image: '/fitstore.jpg',
