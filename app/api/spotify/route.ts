@@ -1,10 +1,11 @@
-import { getNowPlaying } from 'lib/spotify'
+import { NextResponse } from 'next/server'
+import { getNowPlaying } from '@/lib/spotify'
 
-export default async function Playing(_, res) {
+export async function GET() {
     const response = await getNowPlaying()
 
     if (response.status === 204 || response.status > 400) {
-        return res.status(200).json({ isPlaying: false })
+        return NextResponse.json({ isPlaying: false })
     }
 
     const song = await response.json()
@@ -15,7 +16,7 @@ export default async function Playing(_, res) {
     const albumImageUrl = song.item.album.images[0].url
     const songUrl = song.item.external_urls.spotify
 
-    return res.status(200).json({
+    return NextResponse.json({
         album,
         albumImageUrl,
         artist,
