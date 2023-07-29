@@ -11,8 +11,8 @@ const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64')
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`
 
-const getAccessToken = async () => {
-    const response = await fetch(TOKEN_ENDPOINT, {
+export async function GET() {
+    const { access_token } = await fetch(TOKEN_ENDPOINT, {
         method: 'POST',
         headers: {
             Authorization: `Basic ${basic}`,
@@ -22,23 +22,13 @@ const getAccessToken = async () => {
             grant_type: 'refresh_token',
             refresh_token
         })
-    })
+    }).then((res) => res.json())
 
-    return response.json()
-}
-
-export const getNowPlaying = async () => {
-    const { access_token } = await getAccessToken()
-
-    return fetch(NOW_PLAYING_ENDPOINT, {
+    const response = await fetch(NOW_PLAYING_ENDPOINT, {
         headers: {
             Authorization: `Bearer ${access_token}`
         }
     })
-}
-
-export async function GET() {
-    const response = await getNowPlaying()
 
     if (response.status === 204 || response.status > 400) {
         return NextResponse.json({ isPlaying: false })
