@@ -9,11 +9,14 @@ export const metadata: Metadata = {
 export default async function Blog() {
     return (
         <main>
-            <h1 className='text-2xl font-bold'>Blog</h1>
+            <h1 className='text-2xl font-bold text-dark dark:text-white'>Blog</h1>
             <section>
                 <div className='py-4'>
-                    <Link href={'/blog/real-scroll-for-a-chat-application'}>
-                        <h2 className='text-lg font-bold text-white'>Real Scroll for a Chat Application</h2>
+                    <Link
+                        href={'/blog/real-scroll-for-a-chat-application'}
+                        className='hover:underline underline-offset-2 dark:text-neutral text-gray'
+                    >
+                        <h2 className='text-lg font-bold'>Real Scroll for a Chat Application</h2>
                     </Link>
                 </div>
             </section>
