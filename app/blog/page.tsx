@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
     return (
-        <main className='min-h-screen'>
+        <main>
             <h1 className='text-2xl font-bold'>Blog</h1>
             <section>
                 <div className='py-4'>
